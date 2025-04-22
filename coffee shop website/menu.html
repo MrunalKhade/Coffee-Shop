@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Menu - Café Aroma</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo"><a href="index.html">Café <span>Aroma</span></a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+    </div>
+  </header>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+      <h2 class="section-title">Our Delicious Menu</h2>
+      <div class="filter-buttons">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('hot')">Hot</button>
+        <button onclick="filterMenu('cold')">Cold</button>
+        <button onclick="filterMenu('pastry')">Pastries</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Hot -->
+        <div class="menu-card hot">
+          <img src="assets/images/espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>Strong & bold Italian espresso.</p>
+        </div

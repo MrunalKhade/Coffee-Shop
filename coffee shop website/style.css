@@ -1,0 +1,334 @@
+/* Reset & Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+    background-image: url('assets/coffee-background.webp');  /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header */
+  header {
+    background-color: #4b2e2e;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .logo span {
+    color: #caa472;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    color: white;
+    font-weight: bold;
+  }
+  .nav-links a:hover {
+    color: #caa472;
+  }
+  .toggle-theme {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('../assets/images/hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+  }
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  .btn {
+    display: inline-block;
+    background-color: #caa472;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background-color: #b78e58;
+  }
+  
+  /* Featured Section */
+  .featured {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #fffaf3;
+  }
+  .featured h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    background: #fff0db;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+  }
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card h3 {
+    margin-top: 1rem;
+    color: #4b2e2e;
+  }
+  .card p {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4b2e2e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Dark Mode */
+  body.dark {
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+  }
+  body.dark header, body.dark footer {
+    background-color: #121212;
+  }
+  body.dark .hero-text {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  body.dark .card {
+    background-color: #2e2e2e;
+    color: white;
+  }
+  body.dark .btn {
+    background-color: #f4b860;
+    color: #000;
+  }
+  body.dark .btn:hover {
+    background-color: #e0a34f;
+  }
+  
+
+  .menu-section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .filter-buttons {
+    margin-bottom: 2rem;
+  }
+  .filter-buttons button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: #caa472;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  .filter-buttons button:hover {
+    background-color: #b78e58;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  .menu-card {
+    background-color: #fff0db;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .menu-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+
+  .about-section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .about-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-text {
+    max-width: 600px;
+  }
+  .about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .about-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  @media(min-width: 768px) {
+    .about-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .about-text {
+      text-align: left;
+    }
+  }
+  
+
+  .gallery-section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  .gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .gallery-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .gallery-grid img:hover {
+    transform: scale(1.03);
+  }
+
+
+  .contact-section {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  .contact-info {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact-form label {
+    text-align: left;
+    font-weight: bold;
+  }
+  .contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .contact-form button {
+    background-color: #caa472;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form button:hover {
+    background-color: #b78e58;
+  }
+  .map-container {
+    margin-top: 3rem;
+  }
+  iframe {
+    border-radius: 10px;
+  }
+  
+  
